@@ -1,22 +1,27 @@
-// 자료구조 - 데이터의 저장 방법
+const playerName = "nico";
+const playerPoint = 121212;
+const playerHandsome = false;
+const playerFat = "little bit";
 
-const daysOfWeek = ["mon", "tue", "wed", "thu", "fri", "sat"];
+// player라는 개체에 대해 설명하고 있는 특성들인 것을 알 수 있다. 데이터를 가능한 최선으로 정리해보도록 하자. 위에처럼 하게 되면 변수를 많이 만들어야 하고, 저런 변수가 있다는 것을 기억해야 해서 별로다.
 
-// Get Item from Array
-console.log(daysOfWeek);
+// const player = ["nico", 1212, false, "little bit"];
+// 한 줄로 정리는 되지만, 이게 어떤 의미를 가진 값인지 알 수 없다.
 
-/* 시작과 끝에 [] 쓴다. 내부에서는 , 로 구분한다. [] 안에는 뭐든 넣어도 된다. 인덱스는 0부터 시작한다.
- 사용자가 할 일 목록을 만들도록 할 때, 그 항목들을 어디다가 저장할 수 있을까? -> 배열 안에 넣으면 좋겠지? */
+// object를 만들어보자.
+const player = {
+  name: "nico",
+  points: 10,
+  fat: true,
+};
+console.log(player);
+console.log(player.name);
+// console은 객체이고 그 안에 log라는 속성이 있음을 알 수 있다.
+console.log(player["name"]);
 
-// Add one more day to the array
-daysOfWeek.push("sun");
+console.log(player);
+player.fat = false;
+player.lastName = "potato";
+console.log(player);
 
-console.log(daysOfWeek);
-
-/* Array의 목적
-    하나의 variable 안에 데이터 list를 가지는 것!
-    필요한 수많은 variable의 개수를 확 줄여줄 수 있다.
-*/
-
-const toBuy = ["potato", "tomato", "pizza"];
-toBuy.push("kimbab");
+// constant는 수정할 수 없는데 어째서 수정이 된 거져? object는 동일하고 그 안의 내용을 수정하는 것이므로 괜찮다.
