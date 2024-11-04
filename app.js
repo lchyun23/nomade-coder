@@ -1,8 +1,17 @@
-function plus(firstNumber, secondNumber) {
-  console.log(firstNumber + secondNumber);
+const player = {
+  name: "chany",
+  sayHello: function (otherPersonsName) {
+    console.log("hello! " + otherPersonsName + " nice to meet you");
+  },
+};
+
+console.log(player.name);
+player.sayHello("lynn");
+player.sayHello("nico");
+
+// function에게 정보를 보내는 법을 배웠다. console.log() 하는 것처럼 우리만의 것을 만들었다.
+
+function plus(a, b) {
+  console.log(a + b);
 }
-function divide(a, b) {
-  console.log(a / b);
-}
-plus(8, 60);
-divide(98, 20);
+plus(5, 5);
